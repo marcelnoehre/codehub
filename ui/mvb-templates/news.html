@@ -1,19 +1,41 @@
-<!-- description -->
+<!-- 1 image -->
+<h4>{TITLE}</h4>
 <p>{DESCRIPTION}</p>
-<p>&nbsp;</p>
-
-<!-- 2 in a row -->
-<div style="display: flex; justify-content: space-between;">
-    <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" width="48%" height="auto" />
-    <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" width="48%" height="auto" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 mt-2 mb-2 d-flex align-items-center mx-auto">
+            <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" class="img-fluid" />
+        </div>
+    </div>
 </div>
 
-<!-- 3 in a row -->
-<div style="display: flex; justify-content: space-between;">
-    <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" width="32%" height="auto" />
-    <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" width="32%" height="auto" />
-    <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" width="32%" height="auto" />
+<!-- 2 images -->
+<h4>{TITLE}</h4>
+<p>{DESCRIPTION}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 mt-2 mb-2 d-flex align-items-center">
+            <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" class="img-fluid" />
+        </div>
+        <div class="col-md-6 col-sm-12 mt-2 mb-2 d-flex align-items-center">
+            <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" class="img-fluid" />
+        </div>
+    </div>
 </div>
 
-<!-- images with different format -->
-<img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" width="48%" height="auto" style="object-fit: contain;" />
+<!-- 3 images -->
+<h4>{TITLE}</h4>
+<p>{DESCRIPTION}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-12 mt-2 mb-2 d-flex align-items-center">
+            <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" class="img-fluid" />
+        </div>
+        <div class="col-md-4 col-sm-12 mt-2 mb-2 d-flex align-items-center">
+            <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" class="img-fluid" />
+        </div>
+        <div class="col-md-4 col-sm-12 mt-2 mb-2 d-flex align-items-center">
+            <img src="images/news/{YYYY}/image_name.png" alt="{DESCRIPTION}" class="img-fluid" />
+        </div>
+    </div>
+</div>
