@@ -43,7 +43,7 @@ def extract_time(start, end, shortage, sprint):
         except Exception:
             pass
 
-    lnw.append(['P000001576', 'Kettler St. Ingbert', 'MDE2.0', f'{end.day}.{end.month}.{end.year}', daily, 'M', f'Sprint-{sprint}', '', '', '' , f'{shortage}: Projektplanung'])
+    lnw.append(['P000001576', 'Kettler St. Ingbert', 'MDE2.0', f'{str(end.day).zfill(2)}.{str(end.month).zfill(2)}.{end.year}', daily, 'M', f'Sprint-{sprint}', '', '', '' , f'{shortage}: Projektplanung'])
     
     return lnw
 
