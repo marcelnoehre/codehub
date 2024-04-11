@@ -15,7 +15,8 @@ def main():
 
 def extract_time(start, end, shortage, sprint):
     months = []
-    lnw = []
+    lnw_mde2 = []
+    lnw_SCB = []
     daily = 0
 
     dates = [
@@ -33,19 +34,22 @@ def extract_time(start, end, shortage, sprint):
             df = pd.read_excel(f'{date[0]}_{date[1]}_{shortage}_Tagesberichte.xlsx')
             for index, row in df.iterrows():
                 try:
-                    if start <= datetime.strptime(str(row.iloc[0]).split(', ')[1], "%d.%m.%Y") <= end and row.iloc[1] == 'MDE2.0':
-                        if row.iloc[5] == 'Scrum-Daily':
-                            daily += 0.25
-                        else:
-                            lnw.append(['P000001576', 'Kettler St. Ingbert', 'MDE2.0', row.iloc[0].split(', ')[1], row.iloc[6], row.iloc[4], f'Sprint-{sprint}', '', '', '' , f'{shortage}: {row.iloc[5]}'])
+                    if start <= datetime.strptime(str(row.iloc[0]).split(', ')[1], "%d.%m.%Y") <= end:
+                        if row.iloc[1] == 'MDE2.0':
+                            if row.iloc[5] == 'Scrum-Daily':
+                                daily += 0.25
+                            else:
+                                lnw_mde2.append([row.iloc[3], 'Kettler St. Ingbert', 'MDE2.0', row.iloc[0].split(', ')[1], row.iloc[6], row.iloc[4], f'Sprint-{sprint}', '', '', '' , f'{shortage}: {row.iloc[5]}'])
+                        elif row.iloc[1] == 'SCB':
+                            lnw_SCB.append([row.iloc[3], 'Schmitz Cargobull', 'SCB', row.iloc[0].split(', ')[1], row.iloc[6], row.iloc[4], '200435', '', '', '' , f'{shortage}: {row.iloc[5]}' ])
                 except Exception:
                     pass
         except Exception:
             pass
 
-    lnw.append(['P000001576', 'Kettler St. Ingbert', 'MDE2.0', f'{str(end.day).zfill(2)}.{str(end.month).zfill(2)}.{end.year}', daily, 'M', f'Sprint-{sprint}', '', '', '' , f'{shortage}: Projektplanung'])
+    lnw_mde2.append(['P000001576', 'Kettler St. Ingbert', 'MDE2.0', f'{str(end.day).zfill(2)}.{str(end.month).zfill(2)}.{end.year}', daily, 'M', f'Sprint-{sprint}', '', '', '' , f'{shortage}: Projektplanung'])
     
-    return lnw
+    return [lnw_mde2, lnw_SCB]
 
 
 def create_lnw(lnw, shortage, sprint):
