@@ -53,6 +53,7 @@ def extract_time(start, end, shortage, sprint):
 
 
 def create_lnw(lnws, shortage, sprint):
+    lnws = [arr for arr in lnws if arr]
     workbook = load_workbook('template.xlsx')
     sheet = workbook.active
     sheet.title = f'Sprint-{sprint}'
@@ -75,6 +76,11 @@ def create_lnw(lnws, shortage, sprint):
                 elif sheet.cell(row = 1, column = j + 1).value == 'Projektnummer':
                     cell.alignment = Alignment(horizontal = 'center', vertical = 'center')
                     cell.font = Font(bold = True)
+
+                elif sheet.cell(row = 1, column = j + 1).value == 'Projektaufgabennr.' and lnw[i][2] == 'SCB':
+                    cell.alignment = Alignment(horizontal = 'center', vertical = 'center')
+                    cell.value = int(lnw[i][j])
+                    cell.number_format = '0'
 
                 else:
                     cell.alignment = Alignment(horizontal = 'center', vertical = 'center')
