@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 from openpyxl import load_workbook
-from openpyxl.styles import Alignment, Border, Side, Font
+from openpyxl.styles import Alignment, Border, Side, Font, PatternFill
 
 
 def main():
@@ -52,33 +52,44 @@ def extract_time(start, end, shortage, sprint):
     return [lnw_mde2, lnw_SCB]
 
 
-def create_lnw(lnw, shortage, sprint):
+def create_lnw(lnws, shortage, sprint):
     workbook = load_workbook('template.xlsx')
     sheet = workbook.active
     sheet.title = f'Sprint-{sprint}'
 
-    for i in range(len(lnw)):
-        for j in range(len(lnw[i])):
+    ri = 0
+    for lnw_index, lnw in enumerate(lnws):
+        for i in range(len(lnw)):
+            for j in range(len(lnw[i])):
+                cell = sheet.cell(row = ri + 2, column = j + 1, value = lnw[i][j])
+                cell.border = Border(left = Side(border_style = 'thin'), right = Side(border_style = 'thin'), top = Side(border_style = 'thin'), bottom = Side(border_style = 'thin'))
 
-            cell = sheet.cell(row = i + 2, column = j + 1, value = lnw[i][j])
-            cell.border = Border(left=Side(border_style='thin'), right=Side(border_style='thin'), top=Side(border_style='thin'), bottom=Side(border_style='thin'))
+                if sheet.cell(row = 1, column = j + 1).value == 'STD':
+                    cell.alignment = Alignment(horizontal = 'center', vertical = 'center')
+                    decimal = len(str(cell.value).split('.')[1]) if '.' in str(cell.value) else 0
+                    cell.number_format = '0' if decimal == 0 else '0.' + '0' * decimal
 
-            if sheet.cell(row = 1, column = j + 1).value == 'STD':
-                cell.alignment = Alignment(horizontal='center', vertical='center')
-                decimal = len(str(cell.value).split('.')[1]) if '.' in str(cell.value) else 0
-                cell.number_format = '0' if decimal == 0 else '0.' + '0' * decimal
+                elif sheet.cell(row = 1, column = j + 1).value == 'AP und Tätigkeit':
+                    cell.alignment = Alignment(horizontal = 'left', vertical = 'center')
 
-            elif sheet.cell(row = 1, column = j + 1).value == 'AP und Tätigkeit':
-                cell.alignment = Alignment(horizontal='left', vertical='center')
+                elif sheet.cell(row = 1, column = j + 1).value == 'Projektnummer':
+                    cell.alignment = Alignment(horizontal = 'center', vertical = 'center')
+                    cell.font = Font(bold = True)
 
-            elif sheet.cell(row = 1, column = j + 1).value == 'Projektnummer':
-                cell.alignment = Alignment(horizontal='center', vertical='center')
-                cell.font = Font(bold=True)
+                else:
+                    cell.alignment = Alignment(horizontal = 'center', vertical = 'center')
+            
+            ri += 1
+        
+        if lnw_index != len(lnws) - 1:
+            for j in range(len(lnw[i])):
+                cell = sheet.cell(row = ri + 2, column = j + 1, value = '')
+                cell.fill = PatternFill(start_color='adaaaa', end_color='adaaaa', fill_type='solid')
+                cell.border = Border(left = Side(border_style = 'thin'), right = Side(border_style = 'thin'), top = Side(border_style = 'thin'), bottom = Side(border_style = 'thin'))
+            
+            ri += 1
 
-            else:
-                cell.alignment = Alignment(horizontal='center', vertical='center')
-
-    workbook.save(f'Leistungsnachweise-{shortage}-Sprint {sprint}.xlsx')
+    workbook.save(f'Leistungsnachweise-{shortage}.xlsx')
 
 
 if __name__ == '__main__':
