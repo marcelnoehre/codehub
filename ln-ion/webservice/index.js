@@ -32,6 +32,23 @@ app.post('/store-file', (req, res, next) => {
     }
 });
 
+app.post('/clear-storage', (req, res, next) => {
+    try {
+        const storage = path.resolve(__dirname, 'storage');
+        fs.readdir(storage, (err, files) => {
+            if (err) throw new Error('Error Reading Storage: ' + err);
+            files.forEach(file => {
+                fs.unlink(path.resolve(storage, file), (err) => {
+                    if (err) throw new Error('Error Deleting File: ' + err);
+                });
+            });
+        });
+        res.send('Storage Cleared');
+    } catch (err) {
+        next(err);
+    }
+});
+
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
