@@ -1,0 +1,921 @@
+{
+  "ItemMasterHeader": {
+    "ItemID": {
+      "ID": {
+        "@accountingEntity": "7100",
+        "@lid": "lid://infor.ln.ln01/2100",
+        "@variationID": "189222",
+        "#text": "GE05101"
+      }
+    },
+    "DisplayID": "GE05101",
+    "GTIN": [],
+    "ServiceIndicator": "false",
+    "Description": "Packaging for Logigame",
+    "Note": [],
+    "Classification": {
+      "Codes": [
+        {
+          "@listID": "Item Types",
+          "@sequence": "1",
+          "#text": "Product"
+        },
+        {
+          "@listID": "Item Groups",
+          "@sequence": "2",
+          "@accountingEntity": "7100",
+          "#text": "P00010"
+        },
+        {
+          "@listID": "Sizes",
+          "@sequence": "3",
+          "#text": "100 x 82"
+        },
+        {
+          "@listID": "Product Types",
+          "@sequence": "4",
+          "@accountingEntity": "7100",
+          "#text": "PKG"
+        },
+        {
+          "@listID": "Item Classes",
+          "@sequence": "5",
+          "@accountingEntity": "7100",
+          "#text": "GE.010"
+        },
+        {
+          "@listID": "Product Lines",
+          "@sequence": "6",
+          "@accountingEntity": "7100",
+          "#text": "GE.050"
+        },
+        {
+          "@listID": "Product Selection Codes",
+          "@sequence": "7",
+          "@accountingEntity": "7100",
+          "#text": "G05"
+        },
+        {
+          "@listID": "ABC Codes",
+          "@sequence": "8",
+          "#text": "C"
+        },
+        {
+          "@listID": "MRO Classes",
+          "@sequence": "9",
+          "#text": "*"
+        },
+        {
+          "@listID": "Order Policy",
+          "@sequence": "10",
+          "#text": "Anonymous"
+        },
+        {
+          "@listID": "LN Service Item Groups",
+          "@sequence": "11",
+          "@accountingEntity": "7100",
+          "#text": "S10.20"
+        },
+        {
+          "@listID": "LN Configuration Controlled",
+          "@sequence": "12",
+          "#text": "Serialized"
+        }
+      ]
+    },
+    "HazardousMaterialIndicator": "false",
+    "LeadTimeDuration": "PT0H0M0S",
+    "BackFlushedIndicator": "false",
+    "TrackingIndicator": "true",
+    "ItemStatus": {
+      "Code": {
+        "@listID": "Item Status",
+        "#text": "Open"
+      },
+      "TimePeriod": {
+        "StartDateTime": "1970-01-01T00:00:01Z",
+        "EndDateTime": "9999-12-31T00:00:00Z"
+      },
+      "ArchiveIndicator": "false"
+    },
+    "BaseUOMCode": "EA",
+    "StorageUOMCode": "EA",
+    "LastModificationDateTime": "2024-04-23T06:30:07Z",
+    "UOMGroupReference": {
+      "ID": {
+        "@accountingEntity": "7100",
+        "@lid": "lid://infor.ln.ln01/2100",
+        "#text": "000010"
+      }
+    },
+    "ItemValue": {
+      "UnitValue": {
+        "Amount": {
+          "@currencyID": "EUR",
+          "#text": "2"
+        },
+        "BaseAmount": {
+          "@currencyID": "USD",
+          "#text": "2"
+        },
+        "ReportAmount": {
+          "@currencyID": "USD",
+          "#text": "2"
+        },
+        "PerQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "PerBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        }
+      },
+      "CostingMethodCode": "Standard"
+    },
+    "CountryAndPercent": {
+      "CountryCode": "DE"
+    },
+    "SerialControlIndicator": "false",
+    "LotControlIndicator": "false",
+    "ConfiguredItemIndicator": "false",
+    "UserArea": {
+      "Property": [
+        {
+          "NameValue": {
+            "@name": "ln.SalesIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ProductionIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.CostingIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.WarehousingIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ProjectIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.QualityIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.PurchaseIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.OrderingIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.PlanningIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ServiceIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.FreightIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ToolIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ReleaseToWarehousing",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.DerivedFromItem",
+            "@type": "StringType",
+            "#text": "GE05101"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.SearchKey1",
+            "@type": "StringType",
+            "#text": "PACKAGING FOR LO"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.SearchKey2",
+            "@type": "StringType",
+            "#text": "GE05101"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.CustomizedIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.CriticalSafetyItem",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.SerialTracking",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.SerialsInInventory",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.LotTracking",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.LotsInInventory",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "stringelement",
+            "@type": "StringType",
+            "#text": "10.75"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "jetzt.gerade",
+            "@type": "DateType",
+            "#text": "2024-04-23T06:30:08Z"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "numeric.element",
+            "@type": "NumericType",
+            "#text": "123.45"
+          }
+        }
+      ],
+      "MyOwnUserAreaExtension": []
+    },
+    "EnvironmentalComplianceCode": {
+      "@listID": "Environmental Compliance",
+      "#text": "Not Relevant"
+    },
+    "PhantomIndicator": "false",
+    "SellableIndicator": "false",
+    "ProducibleIndicator": "true",
+    "PurchasableIndicator": "true",
+    "StockableIndicator": "true",
+    "PackagingUnit": {
+      "ID": "EA",
+      "Name": "Each",
+      "UnitCode": "EA",
+      "Dimensions": {
+        "WidthMeasure": {
+          "@unitCode": "CM",
+          "#text": "0"
+        },
+        "LengthMeasure": {
+          "@unitCode": "CM",
+          "#text": "0"
+        },
+        "HeightMeasure": {
+          "@unitCode": "CM",
+          "#text": "0"
+        }
+      },
+      "NetWeightMeasure": {
+        "@unitCode": "KG",
+        "#text": "0.5"
+      },
+      "GrossWeightMeasure": {
+        "@unitCode": "KG",
+        "#text": "0.5"
+      },
+      "TotalVolumeMeasure": {
+        "@unitCode": "CM3",
+        "#text": "0"
+      }
+    },
+    "ProcurementParameters": {
+      "ProcurementMethodCode": "Purchase",
+      "DefaultSource": {
+        "SupplierParty": {
+          "PartyIDs": {
+            "ID": {
+              "@accountingEntity": "7100",
+              "@lid": "lid://infor.ln.ln01/2100",
+              "#text": "SU0000013"
+            }
+          }
+        }
+      },
+      "OrderMethodCode": "Lot for Lot",
+      "OrderIncrementQuantity": {
+        "@unitCode": "EA",
+        "#text": "1"
+      },
+      "FixedOrderQuantity": {
+        "@unitCode": "EA",
+        "#text": "1"
+      },
+      "FixedOrderBaseUOMQuantity": {
+        "@unitCode": "EA",
+        "#text": "1"
+      },
+      "MinOrderQuantity": {
+        "@unitCode": "EA",
+        "#text": "1"
+      },
+      "MinOrderBaseUOMQuantity": {
+        "@unitCode": "EA",
+        "#text": "1"
+      },
+      "MaxOrderQuantity": {
+        "@unitCode": "EA",
+        "#text": "99999999"
+      },
+      "MaxOrderBaseUOMQuantity": {
+        "@unitCode": "EA",
+        "#text": "99999999"
+      },
+      "PlanningMethodCode": "Planned",
+      "OrderPointQuantity": {
+        "@unitCode": "EA",
+        "#text": "0"
+      },
+      "OrderPointBaseUOMQuantity": {
+        "@unitCode": "EA",
+        "#text": "0"
+      },
+      "MaxQuantity": {
+        "@unitCode": "EA",
+        "#text": "999999999"
+      },
+      "MaxBaseUOMQuantity": {
+        "@unitCode": "EA",
+        "#text": "999999999"
+      },
+      "SafetyStockQuantity": {
+        "@unitCode": "EA",
+        "#text": "0"
+      },
+      "SafetyStockBaseUOMQuantity": {
+        "@unitCode": "EA",
+        "#text": "0"
+      },
+      "EOQQuantity": {
+        "@unitCode": "EA",
+        "#text": "1"
+      },
+      "EOQBaseUOMQuantity": {
+        "@unitCode": "EA",
+        "#text": "1"
+      },
+      "LeadTimeDuration": "P1D",
+      "OrderCycleDuration": "PT0H0M0S",
+      "Horizons": [
+        {
+          "@durationType": "Ordering",
+          "#text": "P364D"
+        },
+        {
+          "@durationType": "Planning",
+          "#text": "P364D"
+        }
+      ]
+    },
+    "ItemPlanning": {
+      "PlanItemType": "Item",
+      "PlanningLevel": "1",
+      "PlanningTimeFence": "P2D"
+    },
+    "PlannerPersonReference": {
+      "IDs": {
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "94030"
+        }
+      },
+      "Name": "Rick Harres"
+    }
+  },
+  "ItemLocation": [
+    {
+      "Classification": {
+        "Codes": {
+          "Code": {
+            "@listID": "ABC Codes",
+            "@sequence": "1",
+            "#text": "C"
+          }
+        }
+      },
+      "UserArea": [],
+      "WarehouseLocation": {
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "W_DE0010"
+        },
+        "Name": "Main Warehouse GE-Munich"
+      },
+      "Location": {
+        "@type": "Site",
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "S_7100"
+        },
+        "Description": "IA Global Manufacturing and Su"
+      },
+      "StockCarryingCost": {
+        "Amount": {
+          "@currencyID": "EUR",
+          "#text": "0"
+        },
+        "Duration": "P1Y"
+      },
+      "InboundLeadTimeDuration": "PT0H0M0S",
+      "OutboundLeadTimeDuration": "PT0H0M0S"
+    },
+    {
+      "UserArea": [],
+      "WarehouseLocation": {
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "W_US0011"
+        },
+        "Name": "FG Warehouse New York"
+      },
+      "Location": {
+        "@type": "Site",
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "S_7100"
+        },
+        "Description": "IA Global Manufacturing and Su"
+      },
+      "StockCarryingCost": {
+        "Amount": {
+          "@currencyID": "USD",
+          "#text": "0"
+        },
+        "Duration": "P1Y"
+      },
+      "InboundLeadTimeDuration": "PT0H0M0S",
+      "OutboundLeadTimeDuration": "PT0H0M0S"
+    },
+    {
+      "UserArea": [],
+      "WarehouseLocation": {
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "W_US0012"
+        },
+        "Name": "RM Warehouse New York"
+      },
+      "Location": {
+        "@type": "Site",
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "S_7100"
+        },
+        "Description": "IA Global Manufacturing and Su"
+      },
+      "StockCarryingCost": {
+        "Amount": {
+          "@currencyID": "USD",
+          "#text": "0"
+        },
+        "Duration": "P1Y"
+      },
+      "InboundLeadTimeDuration": "PT0H0M0S",
+      "OutboundLeadTimeDuration": "PT0H0M0S"
+    },
+    {
+      "UserArea": [],
+      "WarehouseLocation": {
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "W_US0020"
+        },
+        "Name": "Main Warehouse US-Atlanta"
+      },
+      "Location": {
+        "@type": "Site",
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "S_7100"
+        },
+        "Description": "IA Global Manufacturing and Su"
+      },
+      "StockCarryingCost": {
+        "Amount": {
+          "@currencyID": "USD",
+          "#text": "0"
+        },
+        "Duration": "P1Y"
+      },
+      "InboundLeadTimeDuration": "PT0H0M0S",
+      "OutboundLeadTimeDuration": "PT0H0M0S"
+    },
+    {
+      "Classification": {
+        "Codes": [
+          {
+            "@listID": "Item Types",
+            "@sequence": "1",
+            "#text": "Product"
+          },
+          {
+            "@listID": "Item Groups",
+            "@sequence": "2",
+            "@accountingEntity": "7100",
+            "#text": "P00010"
+          },
+          {
+            "@listID": "ABC Codes",
+            "@sequence": "3",
+            "#text": "C"
+          },
+          {
+            "@listID": "MRO Classes",
+            "@sequence": "4",
+            "#text": "*"
+          },
+          {
+            "@listID": "LN Service Item Groups",
+            "@sequence": "5",
+            "@accountingEntity": "7100",
+            "#text": "S10.20"
+          },
+          {
+            "@listID": "LN Configuration Controlled",
+            "@sequence": "6",
+            "#text": "Serialized"
+          }
+        ]
+      },
+      "HazardousMaterialIndicator": "false",
+      "LeadTimeDuration": "PT0H0M0S",
+      "BackFlushedIndicator": "false",
+      "ItemValue": {
+        "UnitValue": {
+          "Amount": {
+            "@currencyID": "EUR",
+            "#text": "2"
+          },
+          "BaseAmount": {
+            "@currencyID": "USD",
+            "#text": "2"
+          },
+          "ReportAmount": {
+            "@currencyID": "USD",
+            "#text": "2"
+          },
+          "PerQuantity": {
+            "@unitCode": "EA",
+            "#text": "1"
+          },
+          "PerBaseUOMQuantity": {
+            "@unitCode": "EA",
+            "#text": "1"
+          }
+        }
+      },
+      "UserArea": [
+        {
+          "NameValue": {
+            "@name": "ln.SalesIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ProductionIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.CostingIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.WarehousingIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ProjectIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.QualityIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.PurchaseIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.OrderingIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.PlanningIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ServiceIndicator",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.FreightIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ToolIndicator",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.ReleaseToWarehousing",
+            "@type": "IndicatorType",
+            "#text": "true"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.SerialTracking",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.SerialsInInventory",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.LotTracking",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        },
+        {
+          "NameValue": {
+            "@name": "ln.LotsInInventory",
+            "@type": "IndicatorType",
+            "#text": "false"
+          }
+        }
+      ],
+      "Location": {
+        "@type": "Site",
+        "ID": {
+          "@accountingEntity": "7100",
+          "@lid": "lid://infor.ln.ln01/2100",
+          "#text": "S_7100"
+        },
+        "Description": "IA Global Manufacturing and Su"
+      },
+      "PhantomIndicator": "false",
+      "SellableIndicator": "false",
+      "ProducibleIndicator": "true",
+      "PurchasableIndicator": "true",
+      "StockableIndicator": "true",
+      "PackagingUnit": {
+        "Name": "Each",
+        "UnitCode": "EA",
+        "Dimensions": {
+          "WidthMeasure": {
+            "@unitCode": "CM",
+            "#text": "0"
+          },
+          "LengthMeasure": {
+            "@unitCode": "CM",
+            "#text": "0"
+          },
+          "HeightMeasure": {
+            "@unitCode": "CM",
+            "#text": "0"
+          }
+        },
+        "TotalVolumeMeasure": {
+          "@unitCode": "CM3",
+          "#text": "0"
+        }
+      },
+      "ProcurementParameters": {
+        "ProcurementMethodCode": "Purchase",
+        "DefaultSource": {
+          "SupplierParty": {
+            "PartyIDs": {
+              "ID": {
+                "@accountingEntity": "7100",
+                "@lid": "lid://infor.ln.ln01/2100",
+                "#text": "SU0000013"
+              }
+            }
+          }
+        },
+        "OrderMethodCode": "Lot for Lot",
+        "EffectiveTimePeriod": {
+          "StartDateTime": "1970-01-01T00:00:01Z",
+          "EndDateTime": "9999-12-31T00:00:00Z"
+        },
+        "OrderIncrementQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "FixedOrderQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "FixedOrderBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "MinOrderQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "MinOrderBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "MaxOrderQuantity": {
+          "@unitCode": "EA",
+          "#text": "99999999"
+        },
+        "MaxOrderBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "99999999"
+        },
+        "OrderPointQuantity": {
+          "@unitCode": "EA",
+          "#text": "0"
+        },
+        "OrderPointBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "0"
+        },
+        "MaxQuantity": {
+          "@unitCode": "EA",
+          "#text": "999999999"
+        },
+        "MaxBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "999999999"
+        },
+        "SafetyStockQuantity": {
+          "@unitCode": "EA",
+          "#text": "0"
+        },
+        "SafetyStockBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "0"
+        },
+        "EOQQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "EOQBaseUOMQuantity": {
+          "@unitCode": "EA",
+          "#text": "1"
+        },
+        "LeadTimeDuration": "P1D",
+        "OrderCycleDuration": "PT0H0M0S",
+        "Horizons": [
+          {
+            "@durationType": "Ordering",
+            "#text": "P364D"
+          },
+          {
+            "@durationType": "Planning",
+            "#text": "P364D"
+          }
+        ]
+      },
+      "ItemPlanning": {
+        "PlanItemType": "Item",
+        "PlanningLevel": "1",
+        "PlanningTimeFence": "P2D"
+      },
+      "PlannerPersonReference": {
+        "IDs": {
+          "ID": {
+            "@accountingEntity": "7100",
+            "@lid": "lid://infor.ln.ln01/2100",
+            "#text": "94030"
+          }
+        },
+        "Name": "Rick Harres"
+      }
+    }
+  ]
+}

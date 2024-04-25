@@ -11,8 +11,18 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/ping": {
       "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/store-file": {
+      "post": {
         "description": "",
         "responses": {
           "200": {
