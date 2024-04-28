@@ -23,7 +23,7 @@ const moment = require('moment');
  * @returns {void}
  *  
  */
-app.get('/ping', (req, res) => {
+app.get('/', (req, res) => {
     res.send(`Server is running at http://${host}:${port}`);
 });
 
@@ -52,6 +52,34 @@ app.post('/store-file', (req, res, next) => {
         res.send(`File Saved: ${fileName}`);
     } catch (err) {
         next(err);
+    }
+});
+
+/**
+ * Returns a file based on the provided file name.
+ * 
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ * 
+ * @throws {Error} - Throws an error if no file name is provided.
+ * - 400: No File Name Provided!
+ * - 404: File Not Found!
+ * 
+ * @returns {void}
+ * 
+ */
+app.post('/get-file', (req, res, next) => {
+    try {
+        const storage = path.resolve(__dirname, 'storage');
+        if (!req.body.file) res.status(400).send('No File Name Provided!');
+        const file = path.resolve(storage, `${req.body.file}.json`);
+        fs.readFile(file, 'utf8', (err, data) => {
+            if (err) res.status(404).send('File Not Found!');
+            res.send(data);
+        });
+    } catch (err) {
+       next(err);
     }
 });
 
@@ -89,7 +117,7 @@ app.post('/clear-storage', (req, res, next) => {
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(port, host, () => {
     console.log(`Server is running at http://${host}:${port}`);
