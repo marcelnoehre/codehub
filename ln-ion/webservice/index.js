@@ -56,6 +56,34 @@ app.post('/store-file', (req, res, next) => {
 });
 
 /**
+ * Returns a list of files in the storage directory.
+ * 
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ * 
+ * @throws {Error} - Throws an error if reading the storage failed.
+ * - 500: Error Reading Storage: ${err}
+ * 
+ * @returns {void}
+ * 
+ */
+app.post('/get-file-list', (req, res, next) => {
+    try {
+        const storage = path.resolve(__dirname, 'storage');
+        fs.readdir(storage, (err, files) => {
+            if (err) res.status(500).send(`Error Reading Storage: ${err}`);
+            for (let i = 0; i < files.length; i++) {
+                files[i] = files[i].replace('.json', '');
+            }
+            res.send(files);
+        });
+    } catch (err) {
+        next(err);
+    }
+});
+
+/**
  * Returns a file based on the provided file name.
  * 
  * @param {Object} req - Express request object.

@@ -37,6 +37,19 @@
         }
       }
     },
+    "/get-file-list": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/get-file": {
       "post": {
         "description": "",
