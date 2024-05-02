@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "description": "Returns server status message.",
         "responses": {
           "200": {
             "description": "OK"
@@ -23,7 +23,7 @@
     },
     "/store-file": {
       "post": {
-        "description": "",
+        "description": "Stores a file in the storage directory.",
         "responses": {
           "200": {
             "description": "OK"
@@ -39,7 +39,7 @@
     },
     "/get-file-list": {
       "post": {
-        "description": "",
+        "description": "Returns a list of files in the storage directory.",
         "responses": {
           "200": {
             "description": "OK"
@@ -52,7 +52,7 @@
     },
     "/get-file": {
       "post": {
-        "description": "",
+        "description": "Returns a file based on the provided file name.",
         "parameters": [
           {
             "name": "body",
@@ -83,13 +83,26 @@
     },
     "/clear-storage": {
       "post": {
-        "description": "",
+        "description": "Clears the storage directory.",
         "responses": {
           "200": {
             "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/ship-notice": {
+      "post": {
+        "description": "Simulate shipping notification.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
