@@ -1,8 +1,8 @@
 const express = require('express');
 
 const app = express();
-const port = 3000;
-const host = 'localhost';
+const port = 4500;
+const host = '0.0.0.0';
 
 const cors = require('cors');
 app.use(cors({ origin: '*' }));
