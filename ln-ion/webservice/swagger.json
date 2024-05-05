@@ -21,24 +21,8 @@
         }
       }
     },
-    "/store-file": {
-      "post": {
-        "description": "Stores a file in the storage directory.",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/get-file-list": {
-      "post": {
+    "/file/get-file-list": {
+      "get": {
         "description": "Returns a list of files in the storage directory.",
         "responses": {
           "200": {
@@ -50,7 +34,7 @@
         }
       }
     },
-    "/get-file": {
+    "/file/get-file": {
       "post": {
         "description": "Returns a file based on the provided file name.",
         "parameters": [
@@ -81,7 +65,23 @@
         }
       }
     },
-    "/clear-storage": {
+    "/file/store": {
+      "post": {
+        "description": "Stores a file in the storage directory.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/file/clear-storage": {
       "post": {
         "description": "Clears the storage directory.",
         "responses": {
@@ -94,7 +94,7 @@
         }
       }
     },
-    "/ship-notice": {
+    "/shipping/notice": {
       "post": {
         "description": "Simulate shipping notification.",
         "responses": {
