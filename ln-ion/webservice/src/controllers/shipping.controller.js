@@ -12,59 +12,21 @@
  * 
  */
 async function shipNotice(req, res, next) {
-    try {
+    try {        
         if (!req.body) res.status(400).send('No Data Provided!');
-        const doc = req.body.DataArea.AdvanceShipNotice.AdvanceShipNoticeHeader.DocumentID.ID;
-        const sender = req.body.ApplicationArea.Sender;
+        const doc = req.body.AdvanceShipNoticeHeader.DocumentID.ID;
         const answer = '000000' + (Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000).toString();
         const response = {
-            '@releaseID': '9.2',
-            '@versionID': '2.13.0',
-            ApplicationArea: {
-                Sender: {
-                    LogicalID: 'lid://infor.wm.vmzegwmsdb22-wmprd',
-                    ComponentID: 'Warehouse Management'
-                },
-                CreationDateTime: new Date().toISOString(),
-                BODID: `infor-nid:INFOR:${doc['@accountingEntity']}:${doc['@location']}:${answer}:1?AdvanceShipNotice&verb=Acknowledge`
-            },
-            DataArea: {
-                Acknowledge: {
-                    TenantID: 'INFOR',
-                    AccountingEntityID: doc['@accountingEntity'],
-                    LocationID: {
+            AdvanceShipNoticeHeader: {
+                DocumentID: {
+                    ID: {
                         '@accountingEntity': doc['@accountingEntity'],
-                        '#text': doc['@location']
-                    },
-                    OriginalApplicationArea: {
-                        Sender: {
-                            LogicalID: doc['@lid'],
-                            ComponentID: sender.ComponentID,
-                            ConfirmationCode: sender.ConfirmationCode
-                        },
-                        CreationDateTime: req.body.ApplicationArea.CreationDateTime,
-                        BODID: req.body.ApplicationArea.BODID
-                    },
-                    ResponseCriteria: {
-                        ResponseExpression: {
-                            '@actionCode': 'Accepted',
-                            '#text': 'Accepted'
-                        }
+                        '@location': doc['@location'],
+                        $: answer
                     }
                 },
-                AdvanceShipNotice: {
-                    AdvanceShipNoticeHeader: {
-                        DocumentID: {
-                            ID: {
-                                '@accountingEntity': doc['@accountingEntity'],
-                                '@location': doc['@location'],
-                                '#text': answer
-                            }
-                        },
-                        AlternateDocumentID: {
-                            ID: doc['#text']
-                        }
-                    }
+                AlternateDocumentID: {
+                    ID: doc.$
                 }
             }
         }
