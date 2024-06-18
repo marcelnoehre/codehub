@@ -1,0 +1,3 @@
+c ./prime  0.00s user 0.00s system 51% cpu 0.002 total
+java Primes.java  0.45s user 0.04s system 153% cpu 0.319 total
+python3 primes.py  0.09s user 0.01s system 92% cpu 0.115 total

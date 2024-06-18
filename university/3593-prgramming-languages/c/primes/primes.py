@@ -9,7 +9,6 @@ def is_prime(n):
 c, n = 0, 2
 while c < 10000:
     if is_prime(n):
-        print(n)
         c += 1
     n += 1    
     

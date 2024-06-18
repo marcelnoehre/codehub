@@ -9,10 +9,10 @@ union DoubleUnion {
 
 void convertDouble(double num, int* bitRep) {
     union DoubleUnion du;
-    du.value = num;
+    du.d = num;
     uint64_t mask = 1ULL << 63;
     for (int i = 0; i < 64; i++) {
-        bitRep[i] = (du.bits & mask) ? 1 : 0;
+        bitRep[i] = (du.u & mask) ? 1 : 0;
         mask >>= 1;
     }
 }
